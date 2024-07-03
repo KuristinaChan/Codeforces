@@ -31,6 +31,25 @@ ll fdiv(const ll&a,const ll&b){return a/b-((a^b)<0 && a%b);}
 const ll mod = 1000000007;
 // const ll mod = 998244353;
 #define int long long
+// To show that the max distance can also be found in one iteration
+// stack<pair<ll, ll>> mono_stack;
+// 	for (int i = 0; i < n; i++) {
+// 		int start = i;
+// 		while (!mono_stack.empty() && heights[i] < mono_stack.top().second) {
+// 			pair<ll, ll> cur = mono_stack.top();
+// 			mono_stack.pop();
+// 			start = cur.first;
+// 			ans = max(ans, (i - cur.first) * cur.second);
+// 		}
+// 		mono_stack.push({start, heights[i]});
+// 	}
+
+// 	// finish up the remaining rectangles
+// 	while (!mono_stack.empty()) {
+// 		pair<ll, ll> cur = mono_stack.top();
+// 		mono_stack.pop();
+// 		ans = max(ans, (n - cur.first) * cur.second);
+// 	}
 void solve(){
     int n;
     cin>>n;
